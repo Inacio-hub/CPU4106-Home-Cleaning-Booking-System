@@ -1,0 +1,136 @@
+Window: "HomeCare — Booking prototype and 4 more pages - Personal - Microsoft​ Edge", App: msedge.exe.
+	0 window HomeCare — Booking prototype and 4 more pages - Personal - Microsoft​ Edge Secondary Actions: Raise
+		1 pane (disabled)
+		2 region HomeCare — Booking prototype - Microsoft Edge
+			3 region
+				4 region
+					5 region
+						6 button Minimise ID: view_2
+						10752 button Maximise ID: view_3
+						8 button Close ID: view_7
+					9 region
+						10 region
+							11 tool bar App bar ID: view_1000
+								12 button Back ID: view_1001
+								13 button Refresh ID: view_1003
+								14 group
+									15 button View site information ID: view_1015
+									16 edit (settable, string) Address and search bar Description: Search or enter web address Value: 127.0.0.1:59777 ID: view_1017
+									17 region
+										10964 button
+									18 region
+										2357 button Add this page to favourites (Ctrl+D) ID: view_1006
+								21 region
+									22 button Favourites ID: view_1007
+								23 button Personal Profile ID: view_1009
+								24 button Settings and more (Alt+F) ID: view_1011
+								25 button Chat ID: view_1078
+						26 region
+							27 region
+								28 region
+									29 region
+										30 region
+											31 region
+											10908 document HomeCare — Booking prototype Value: http://127.0.0.1:59777/ ID: RootWebArea
+												10909 header
+													10910 text HomeCare
+													10911 text Home cleaning service booking • Week 4 validation prototype
+													10965 text Demo Cleaner • cleaner
+												10913 main
+													10914 heading Manage cleaning appointments
+													10915 text One business. Clear service prices. Bookings and cleaner availability in one place.
+													10983 status ID: message
+														10984 text Booking updated successfully.
+													10966 button Sign out ID: logout
+													10967 heading My assigned jobs ID: bookingtitle
+													10968 group ID: bookinglist
+														10985 table
+															10986 row
+																10987 column header Booking
+																10988 column header Service / customer
+																10989 column header Appointment
+																10990 column header Price
+																10991 column header Status / action
+															10992 row
+																10993 item #1
+																10994 item Standard clean Demo Customer
+																10995 item 2026-10-28 10:00:00 10 FICTIONAL AUDIT WINDOWS 2340 Road
+																10996 item £45.00
+																10997 item in_progress Complete job
+																	10998 button Complete job
+													10926 section footer
+														10927 text Prototype created with assistance for Inacio’s backend integration tests. Demonstration interface; review and explain the code before coursework submission. Prices and account data are fictional.
+									32 edit
+						33 tab Tab bar
+							34 button Search tabs ID: view_1052
+							1870 region ID: view_25
+								1871 tab
+									1872 tab item (selectable) chatgpt - Search - Memory usage - 76.5 MB ID: view_24
+										1873 button Close tab ID: view_27
+									1874 tab item (selectable) Choose Project Subject - Memory usage - 537 MB ID: view_24
+										1875 button Close tab ID: view_27
+									1876 tab item (selectable) Week 4 Attendance Lab - Memory usage - 30.0 MB ID: view_24
+										1877 button Close tab ID: view_27
+									6613 tab item (selectable) HomeCare — Booking prototype - Memory usage - 30.5 MB ID: view_24
+										6614 button Close tab ID: view_27
+									8819 tab item (selectable) HomeCare — Booking prototype - Memory usage - 30.0 MB ID: view_24
+										8820 button Close tab ID: view_27
+									1878 region
+										1879 region
+											1880 region
+										1881 region
+								1882 region
+							46 button New Tab ID: view_28
+							47 region
+				48 region
+
+Document text: ```
+HomeCare
+Home cleaning service booking • Week 4 validation prototype
+Demo Cleaner • cleaner
+Manage cleaning appointments
+One business. Clear service prices. Bookings and cleaner availability in one place.
+Booking updated successfully.
+Sign out
+My assigned jobs
+Booking
+Service / customer
+Appointment
+Price
+Status / action
+#1
+Standard clean
+Demo Customer
+2026-10-28 10:00:00
+10 FICTIONAL AUDIT WINDOWS 2340 Road
+£45.00
+in_progress
+Complete job
+Prototype created with assistance for Inacio’s backend integration tests. Demonstration interface; review and explain the code before coursework submission. Prices and account data are fictional.
+```
+
+Focused element: 16 edit (settable, string) Address and search bar Description: Search or enter web address Value: 127.0.0.1:59777 ID: view_1017
+
+Document text:
+HomeCare
+Home cleaning service booking • Week 4 validation prototype
+Demo Cleaner • cleaner
+Manage cleaning appointments
+One business. Clear service prices. Bookings and cleaner availability in one place.
+Booking updated successfully.
+Sign out
+My assigned jobs
+Booking
+Service / customer
+Appointment
+Price
+Status / action
+#1
+Standard clean
+Demo Customer
+2026-10-28 10:00:00
+10 FICTIONAL AUDIT WINDOWS 2340 Road
+£45.00
+in_progress
+Complete job
+Prototype created with assistance for Inacio’s backend integration tests. Demonstration interface; review and explain the code before coursework submission. Prices and account data are fictional.

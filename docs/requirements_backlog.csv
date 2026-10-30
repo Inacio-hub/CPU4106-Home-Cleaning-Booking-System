@@ -1,0 +1,11 @@
+ID,Priority,Item,Acceptance criterion,Planned responsibility,Current evidence status,Evidence or action
+R1,Must,Customer booking,Known integer service; future whole-hour within 30 days; text address 8 to 250; server price,Jevito frontend; Inacio backend,Technically verified; internal walkthrough pending,test_valid_booking_persisted_and_server_price; address and ID probes
+R2,Must,Own customer records,Other customers cannot cancel or see own rows,Inacio,Technically verified; peer review pending,test_role_and_ownership_restrictions
+R3,Must,Allocation,Admin only; real integer cleaner; available without overlap,Socorrina UI; Inacio backend,Technically verified; seeded cleaner only,test_assignment_and_status_workflow; test_fractional_cleaner_id_rejected
+R4,Must,Cleaner job privacy,Hide requested/cancelled; assigned to in_progress to completed only,Socorrina UI; Inacio backend,Fixed and regression verified 26 Oct; internal walkthrough pending,test_cleaner_cannot_view_pending_request; test_cleaner_cannot_view_cancelled_request
+R5,Must,Cancellation,Own eligible future job; capacity released,Jevito UI; Inacio backend,Technically verified,test_cancel_releases_capacity
+R6,Must,Persistence and conflicts,Store rows; one of two overlapping requests rejected,Inacio,Technically verified for bounded concurrency,test_valid_booking_persisted_and_server_price; test_concurrent_requests_only_one_succeeds
+R7,Should,Readable interface,Explicit labels; keyboard focus; mobile overflow controlled,Jevito and Socorrina,Limited browser verification; wider accessibility pending,browser_results.json
+R8,Must,Internal group review and AI decisions,Explain workflows; check criteria; record genuine decisions and reasons,All team members,Informal discussion reported; detailed outcomes not supplied,group_review_notes.csv; simple_AI_decisions.csv
+R9,Must,Scrum and personal evidence,"Real attendance, decisions, changes, review and individual learning",All; Socorrina coordinates,Records missing; templates available,standup_records.csv; contribution_records.csv
+R10,Could,Reservation expiry,Agree abandoned-request policy with client,Jevito to clarify,Unresolved requirement; no implementation,group requirement discussion; future client question

@@ -1,0 +1,42 @@
+[
+  {
+    "name": "01_pending_hidden",
+    "result": "PASS requested booking #1 is hidden: cleaner My assigned jobs shows No bookings yet",
+    "time": "2026-10-27T23:51:08.604Z"
+  },
+  {
+    "name": "02_admin_allocation",
+    "result": "PASS administrator assigned booking #1; requested -> assigned",
+    "time": "2026-10-27T23:51:49.301Z"
+  },
+  {
+    "name": "03_assigned_visible",
+    "result": "PASS cleaner sees assigned booking #1 and Start job control",
+    "time": "2026-10-27T23:52:08.159Z"
+  },
+  {
+    "name": "04_started",
+    "result": "PASS booking #1 assigned -> in_progress through Start job",
+    "time": "2026-10-27T23:52:15.239Z"
+  },
+  {
+    "name": "05_completed",
+    "result": "PASS booking #1 in_progress -> completed through Complete job",
+    "time": "2026-10-27T23:52:28.328Z"
+  },
+  {
+    "name": "06_cancel_fixture_requested",
+    "result": "Created fictional booking #2 requested for 2026-10-29 10:00 for cancellation-only check",
+    "time": "2026-10-27T23:52:59.608Z"
+  },
+  {
+    "name": "07_cancelled_customer_view",
+    "result": "PASS booking #2 cancelled; customer sees #2 cancelled and #1 completed",
+    "time": "2026-10-27T23:53:12.313Z"
+  },
+  {
+    "name": "08_cancelled_hidden",
+    "result": "PASS cleaner view contains only completed booking #1; cancelled booking #2 and its fictional cancellation address are hidden",
+    "time": "2026-10-27T23:53:42.273Z"
+  }
+]

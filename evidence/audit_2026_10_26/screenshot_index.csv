@@ -1,0 +1,11 @@
+File,Meaning,Environment
+01_customer_saved.png,Revised app fictional requested booking,Linux Chromium 26 October
+02_past_date.png,Revised app actual HTTP 400 feedback,Linux Chromium 26 October
+03_before_pending_leak.png,Baseline defect deliberately reproduced,Linux Chromium 26 October
+04_after_pending_hidden.png,Revised cleaner view hides pending request,Linux Chromium 26 October
+05_admin_assigned.png,Revised administrator allocation,Linux Chromium 26 October
+06_live_schema.png,Revised app schema queried from SQLite,Linux Chromium 26 October
+07_cleaner_completed.png,Revised cleaner completion,Linux Chromium 26 October
+08_keyboard_focus.png,Keyboard date focus outline,Linux Chromium 26 October
+09_mobile_390.png,390 pixel viewport simulation,Linux Chromium 26 October
+10_zoom_200.png,CSS zoom simulation not native browser zoom,Linux Chromium 26 October

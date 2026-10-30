@@ -1,0 +1,126 @@
+Window: "HomeCare — Booking prototype and 4 more pages - Personal - Microsoft​ Edge", App: msedge.exe.
+	0 window HomeCare — Booking prototype and 4 more pages - Personal - Microsoft​ Edge Secondary Actions: Raise
+		1 pane (disabled)
+		2 region HomeCare — Booking prototype - Microsoft Edge
+			3 region
+				4 region
+					5 region
+						6 button Minimise ID: view_2
+						10752 button Maximise ID: view_3
+						8 button Close ID: view_7
+					9 region
+						10 region
+							11 tool bar App bar ID: view_1000
+								12 button Back ID: view_1001
+								13 button Refresh ID: view_1003
+								14 group
+									15 button View site information ID: view_1015
+									16 edit (settable, string) Address and search bar Description: Search or enter web address Value: 127.0.0.1:59777 ID: view_1017
+									17 region
+									18 region
+										2357 button Add this page to favourites (Ctrl+D) ID: view_1006
+								21 region
+									22 button Favourites ID: view_1007
+								23 button Personal Profile ID: view_1009
+								24 button Settings and more (Alt+F) ID: view_1011
+								25 button Chat ID: view_1078
+						26 region
+							27 region
+								28 region
+									29 region
+										30 region
+											31 region
+											11013 document HomeCare — Booking prototype Value: http://127.0.0.1:59777/ ID: RootWebArea
+												11014 header
+													11015 text HomeCare
+													11016 text Home cleaning service booking • Week 4 validation prototype
+													11033 text Demo Customer • customer
+												11018 main
+													11019 heading Manage cleaning appointments
+													11020 text One business. Clear service prices. Bookings and cleaner availability in one place.
+													11089 status ID: message
+														11090 text Booking #2 saved successfully. Status: requested • Quote: £45.00 A cleaner slot is reserved pending administrator approval.
+													11034 button Sign out ID: logout
+													11035 heading Cleaning services
+													11036 text Standard clean
+													11037 text £45.00 • 120 minutes
+													11038 text Deep clean
+													11039 text £90.00 • 240 minutes
+													11040 text End of tenancy
+													11041 text £150.00 • 360 minutes
+													11042 heading Request a booking
+													11043 text Appointments start on the hour, within 08:00–18:00. Book up to 30 days ahead.
+													11044 text Service
+													11045 combo box (settable, string) Service Value: Standard clean — £45.00 ID: service
+													11046 text Date and time
+													11047 local date and time picker (settable, string) Date and time ID: date
+														11048 spin button (settable, float) Day Date and time Description: dd Value: 29
+														11049 text /
+														11050 spin button (settable, float) Month Date and time Description: mm Value: 10
+														11051 text /
+														11052 spin button (settable, float) Year Date and time Description: yyyy Value: 2026
+														11053 text 
+														11054 spin button (settable, float) Hours Date and time Description: -- Value: 10
+														11055 text :
+														11056 spin button (settable, float) Minutes Date and time Description: -- Value: 0
+														11057 button Show local date and time picker Date and time Description: Show local date and time picker Date and time ID: picker
+													11058 text Service address
+													11059 edit (settable, string) Service address Description: Use a fictional address for testing Value: 20 FICTIONAL CANCEL VISIBILITY Road ID: address
+													11060 button Request booking
+													11061 heading My booking requests ID: bookingtitle
+													11062 group ID: bookinglist
+														11091 table
+															11092 row
+																11093 column header Booking
+																11094 column header Service / customer
+																11095 column header Appointment
+																11096 column header Price
+																11097 column header Status / action
+															11098 row
+																11099 item #2
+																11100 item Standard clean Demo Customer
+																11101 item 2026-10-29 10:00:00 20 FICTIONAL CANCEL VISIBILITY Road
+																11102 item £45.00
+																11103 item requested Cancel
+																	11104 button Cancel
+															11105 row
+																11106 item #1
+																11107 item Standard clean Demo Customer
+																11108 item 2026-10-28 10:00:00 10 FICTIONAL AUDIT WINDOWS 2340 Road
+																11109 item £45.00
+																11110 item completed
+													11031 section footer
+														11032 text Prototype created with assistance for Inacio’s backend integration tests. Demonstration interface; review and explain the code before coursework submission. Prices and account data are fictional.
+									32 edit
+						33 tab Tab bar
+							34 button Search tabs ID: view_1052
+							1870 region ID: view_25
+								1871 tab
+									1872 tab item (selectable) chatgpt - Search - Memory usage - 76.5 MB ID: view_24
+										1873 button Close tab ID: view_27
+									1874 tab item (selectable) Choose Project Subject - Memory usage - 537 MB ID: view_24
+										1875 button Close tab ID: view_27
+									1876 tab item (selectable) Week 4 Attendance Lab - Memory usage - 30.0 MB ID: view_24
+										1877 button Close tab ID: view_27
+									6613 tab item (selectable) HomeCare — Booking prototype - Memory usage - 30.5 MB ID: view_24
+										6614 button Close tab ID: view_27
+									8819 tab item (selectable) HomeCare — Booking prototype - Memory usage - 29.3 MB ID: view_24
+										8820 button Close tab ID: view_27
+									1878 region
+										1879 region
+											1880 region
+										1881 region
+								1882 region
+							46 button New Tab ID: view_28
+							47 region
+				48 region
+			11076 status Suggestion available
+
+Document text: ```
+20 FICTIONAL CANCEL VISIBILITY Road
+```
+
+Focused element: 16 edit (settable, string) Address and search bar Description: Search or enter web address Value: 127.0.0.1:59777 ID: view_1017
+
+Document text:
+20 FICTIONAL CANCEL VISIBILITY Road

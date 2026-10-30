@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-26T08:48:49.340Z",
+  "browser": "153.0.8010.0",
+  "environment": "Isolated Linux; fictional data; not user Windows setup",
+  "checks": [
+    {
+      "name": "Baseline pending address fault reproduced",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Customer saved with server quote",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Past date rejected with visible text",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Fixed pending address hidden",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Administrator allocation shown",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Live schema displayed",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Assigned job visible",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Start shows in progress",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Completion displayed",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Reload retains completion",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Explicit form labels",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Keyboard advances to date",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Visible keyboard outline",
+      "pass": true,
+      "detail": "3px"
+    },
+    {
+      "name": "390px no whole page overflow",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "CSS 200 percent zoom no whole page overflow",
+      "pass": true,
+      "detail": "CSS simulation only"
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+Window: "HomeCare — Booking prototype and 4 more pages - Personal - Microsoft​ Edge", App: msedge.exe.
+	0 window HomeCare — Booking prototype and 4 more pages - Personal - Microsoft​ Edge Secondary Actions: Raise
+		1 pane (disabled)
+		2 region HomeCare — Booking prototype - Microsoft Edge
+			3 region
+				4 region
+					5 region
+						6 button Minimise ID: view_2
+						8798 button Maximise ID: view_3
+						8 button Close ID: view_7
+					9 region
+						10 region
+							11 tool bar App bar ID: view_1000
+								12 button Back ID: view_1001
+								13 button Refresh ID: view_1003
+								14 group
+									15 button View site information ID: view_1015
+									16 edit (settable, string) Address and search bar Description: Search or enter web address Value: 127.0.0.1:59777 ID: view_1017
+									17 region
+									18 region
+										2357 button Add this page to favourites (Ctrl+D) ID: view_1006
+								21 region
+									22 button Favourites ID: view_1007
+								23 button Personal Profile ID: view_1009
+								24 button Settings and more (Alt+F) ID: view_1011
+								25 button Chat ID: view_1078
+						26 region
+							27 region
+								28 region
+									29 region
+										30 region
+											31 region
+											8799 document HomeCare — Booking prototype Value: http://127.0.0.1:59777/ ID: RootWebArea
+												8800 header
+													8801 text HomeCare
+													8802 text Home cleaning service booking • Week 4 validation prototype
+													8821 text Demo Customer • customer
+												8804 main
+													8805 heading Manage cleaning appointments
+													8806 text One business. Clear service prices. Bookings and cleaner availability in one place.
+													8852 status ID: message
+														8868 text Booking #1 saved successfully. Status: requested • Quote: £45.00 A cleaner slot is reserved pending administrator approval.
+													8822 button Sign out ID: logout
+													8823 heading Cleaning services
+													8824 text Standard clean
+													8825 text £45.00 • 120 minutes
+													8826 text Deep clean
+													8827 text £90.00 • 240 minutes
+													8828 text End of tenancy
+													8829 text £150.00 • 360 minutes
+													8830 heading Request a booking
+													8831 text Appointments start on the hour, within 08:00–18:00. Book up to 30 days ahead.
+													8832 text Service
+													8833 combo box (settable, string) Service Value: Standard clean — £45.00 ID: service
+													8834 text Date and time
+													8835 local date and time picker (settable, string) Date and time ID: date
+														8836 spin button (settable, float) Day Date and time Description: dd Value: 28
+														8837 text /
+														8838 spin button (settable, float) Month Date and time Description: mm Value: 10
+														8839 text /
+														8840 spin button (settable, float) Year Date and time Description: yyyy Value: 2026
+														8841 text 
+														8842 spin button (settable, float) Hours Date and time Description: -- Value: 10
+														8843 text :
+														8844 spin button (settable, float) Minutes Date and time Description: -- Value: 0
+														8845 button Show local date and time picker Date and time Description: Show local date and time picker Date and time ID: picker
+													8846 text Service address
+													8847 edit (settable, string) Service address Description: Use a fictional address for testing Value: 10 FICTIONAL AUDIT WINDOWS 2340 Road ID: address
+													8848 button Request booking
+													8849 heading My booking requests ID: bookingtitle
+													8850 group ID: bookinglist
+														8869 table
+															8870 row
+																8871 column header Booking
+																8872 column header Service / customer
+																8873 column header Appointment
+																8874 column header Price
+																8875 column header Status / action
+															8876 row
+																8877 item #1
+																8878 item Standard clean Demo Customer
+																8879 item 2026-10-28 10:00:00 10 FICTIONAL AUDIT WINDOWS 2340 Road
+																8880 item £45.00
+																8881 item requested Cancel
+																	8882 button Cancel
+													8817 section footer
+														8818 text Prototype created with assistance for Inacio’s backend integration tests. Demonstration interface; review and explain the code before coursework submission. Prices and account data are fictional.
+									32 edit
+						33 tab Tab bar
+							34 button Search tabs ID: view_1052
+							1870 region ID: view_25
+								1871 tab
+									1872 tab item (selectable) chatgpt - Search - Memory usage - 76.5 MB ID: view_24
+										1873 button Close tab ID: view_27
+									1874 tab item (selectable) Choose Project Subject - Memory usage - 537 MB ID: view_24
+										1875 button Close tab ID: view_27
+									1876 tab item (selectable) Week 4 Attendance Lab - Memory usage - 30.0 MB ID: view_24
+										1877 button Close tab ID: view_27
+									6613 tab item (selectable) HomeCare — Booking prototype - Memory usage - 30.5 MB ID: view_24
+										6614 button Close tab ID: view_27
+									8819 tab item (selectable) HomeCare — Booking prototype - Memory usage - 116 MB ID: view_24
+										8820 button Close tab ID: view_27
+									1878 region
+										1879 region
+											1880 region
+										1881 region
+								1882 region
+							46 button New Tab ID: view_28
+							47 region
+				48 region
+			8854 status Suggestion available
+
+Document text: ```
+10 FICTIONAL AUDIT WINDOWS 2340 Road
+```
+
+Focused element: 16 edit (settable, string) Address and search bar Description: Search or enter web address Value: 127.0.0.1:59777 ID: view_1017
+
+Document text:
+10 FICTIONAL AUDIT WINDOWS 2340 Road

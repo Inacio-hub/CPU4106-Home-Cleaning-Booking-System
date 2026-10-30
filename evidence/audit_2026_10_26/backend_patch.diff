@@ -1,0 +1,65 @@
+--- baseline/app.py
++++ revised/app.py
+@@ -26,6 +26,10 @@
+    if not c.execute('SELECT 1 FROM CleanerAvailability WHERE cleaner_id=? AND start_at=?',(cleaner,start.isoformat())).fetchone():c.execute('INSERT INTO CleanerAvailability(cleaner_id,start_at,end_at) VALUES(?,?,?)',(cleaner,start.isoformat(),start.replace(hour=18).isoformat()))
+ class Error(Exception):
+  def __init__(self,status,message):self.status=status;self.message=message
++def positive_id(value,label):
++ # JSON booleans and fractional values must never become another record ID.
++ if type(value) is not int or value<1:raise Error(400,'Choose a positive whole-number '+label+' ID')
++ return value
+ class Handler(BaseHTTPRequestHandler):
+  def log_message(self,*a):pass
+  def send_json(self,status,obj,extra=None):
+@@ -35,6 +39,8 @@
+  def data(self):
+   try:
+    length=int(self.headers.get('Content-Length','0'))
++   # Reject invalid framing before reading; read(-1) would wait for EOF.
++   if length<0:raise Error(400,'Content-Length cannot be negative')
+    if length>20000:raise Error(413,'Request too large')
+    val=json.loads(self.rfile.read(length))
+    if not isinstance(val,dict):raise ValueError()
+@@ -62,7 +68,7 @@
+     with connection() as c:
+      sql='SELECT b.*,s.name AS service_name,u.name AS customer_name FROM Bookings b JOIN Services s USING(service_id) JOIN Users u ON b.customer_id=u.user_id';args=[]
+      if u['role']=='customer':sql+=' WHERE b.customer_id=?';args=[u['user_id']]
+-     if u['role']=='cleaner':sql+=' WHERE b.cleaner_id=?';args=[u['user_id']]
++     if u['role']=='cleaner':sql+=" WHERE b.cleaner_id=? AND b.status IN ('assigned','in_progress','completed')";args=[u['user_id']]
+      return self.send_json(200,[dict(r) for r in c.execute(sql+' ORDER BY booking_id DESC',args)])
+    if path=='/api/admin/schema':
+     self.user(['admin'])
+@@ -82,9 +88,11 @@
+     if ck.get('session'):SESSIONS.pop(ck['session'].value,None)
+     return self.send_json(200,{'ok':True},{'Set-Cookie':'session=; Max-Age=0; Path=/'})
+    if path=='/api/bookings':
+-    u=self.user(['customer']);address=str(data.get('service_address','')).strip()
++    u=self.user(['customer']);address=data.get('service_address','')
++    if not isinstance(address,str):raise Error(400,'Service address must be text')
++    address=address.strip()
+     if len(address)<8 or len(address)>250:raise Error(400,'Enter a service address of 8–250 characters')
+-    try:start=datetime.fromisoformat(str(data.get('start_at','')));sid=int(data.get('service_id',0))
++    try:start=datetime.fromisoformat(str(data.get('start_at','')));sid=positive_id(data.get('service_id'),'service')
+     except (ValueError,TypeError):raise Error(400,'Select a valid service and date')
+     if start.tzinfo is not None:raise Error(400,'Use local business time without timezone suffix')
+     if start<=datetime.now():raise Error(400,'Booking date must be in the future')
+@@ -103,7 +111,9 @@
+      result=dict(c.execute('SELECT * FROM Bookings WHERE booking_id=?',(cur.lastrowid,)).fetchone())
+     return self.send_json(201,result)
+    if path.startswith('/api/bookings/'):
+-    parts=path.strip('/').split('/');bid=int(parts[2]);action=parts[3];u=self.user()
++    parts=path.strip('/').split('/')
++    if len(parts)!=4 or not parts[2].isascii() or not parts[2].isdecimal() or int(parts[2])<1:raise Error(404,'Unknown booking action route')
++    bid=int(parts[2]);action=parts[3];u=self.user()
+     with connection() as c:
+      c.execute('BEGIN IMMEDIATE');b=c.execute('SELECT * FROM Bookings WHERE booking_id=?',(bid,)).fetchone()
+      if not b:raise Error(404,'Booking not found')
+@@ -114,7 +124,7 @@
+      elif action=='assign':
+       if u['role']!='admin':raise Error(403,'Administrator access required')
+       if b['status']!='requested':raise Error(409,'Only requested bookings can be assigned')
+-      cid=int(data.get('cleaner_id',0))
++      cid=positive_id(data.get('cleaner_id'),'cleaner')
+       if not c.execute("SELECT 1 FROM Users WHERE user_id=? AND role='cleaner'",(cid,)).fetchone():raise Error(400,'Choose a valid cleaner')
+       if not c.execute('SELECT 1 FROM CleanerAvailability WHERE cleaner_id=? AND start_at<=? AND end_at>=?',(cid,b['start_at'],b['end_at'])).fetchone():raise Error(409,'Cleaner is outside working availability')
+       if c.execute("SELECT 1 FROM Bookings WHERE cleaner_id=? AND booking_id!=? AND status!='cancelled' AND start_at<? AND end_at>?",(cid,bid,b['end_at'],b['start_at'])).fetchone():raise Error(409,'Cleaner already has an overlapping job')

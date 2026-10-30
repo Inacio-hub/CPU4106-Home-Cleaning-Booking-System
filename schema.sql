@@ -1,0 +1,6 @@
+PRAGMA foreign_keys=ON;
+CREATE TABLE IF NOT EXISTS Users(user_id INTEGER PRIMARY KEY, name TEXT NOT NULL, email TEXT NOT NULL UNIQUE, password_hash TEXT NOT NULL, role TEXT NOT NULL CHECK(role IN ('customer','admin','cleaner')));
+CREATE TABLE IF NOT EXISTS Services(service_id INTEGER PRIMARY KEY, name TEXT NOT NULL, price_pence INTEGER NOT NULL CHECK(price_pence>=0), duration_minutes INTEGER NOT NULL CHECK(duration_minutes>0));
+CREATE TABLE IF NOT EXISTS CleanerAvailability(availability_id INTEGER PRIMARY KEY,cleaner_id INTEGER NOT NULL REFERENCES Users(user_id),start_at TEXT NOT NULL,end_at TEXT NOT NULL,CHECK(start_at<end_at));
+CREATE TABLE IF NOT EXISTS Bookings(booking_id INTEGER PRIMARY KEY,customer_id INTEGER NOT NULL REFERENCES Users(user_id),cleaner_id INTEGER REFERENCES Users(user_id),service_id INTEGER NOT NULL REFERENCES Services(service_id),start_at TEXT NOT NULL,end_at TEXT NOT NULL,service_address TEXT NOT NULL,quoted_price_pence INTEGER NOT NULL,status TEXT NOT NULL DEFAULT 'requested' CHECK(status IN ('requested','assigned','in_progress','completed','cancelled')),CHECK(start_at<end_at));
+CREATE INDEX IF NOT EXISTS idx_cleaner_slot ON Bookings(cleaner_id,start_at,end_at,status);

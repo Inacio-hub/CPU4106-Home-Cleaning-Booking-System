@@ -1,0 +1,4 @@
+AI-assisted implementation example,Verified check,Actual group decision (complete genuinely)
+Strict integer identifiers,Fractional service and cleaner identifiers rejected in recorded regression tests,
+Cleaner visibility,Pending and cancelled bookings hidden in recorded regression tests,
+SQLite persistence,Recorded integration tests check persisted bookings and conflicting requests,

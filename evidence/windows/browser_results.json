@@ -1,0 +1,17 @@
+[
+  {
+    "capture": "01_invalid_address",
+    "result": "PASS empty address rejected with HTTP 400; no booking created",
+    "time": "2026-10-27T23:41:32.517Z"
+  },
+  {
+    "capture": "02_customer_booking",
+    "result": "PASS fictional booking #1 requested, Standard clean £45.00, 2026-10-28 10:00",
+    "time": "2026-10-27T23:41:47.722Z"
+  },
+  {
+    "capture": "03_overlap_rejected",
+    "result": "PASS duplicate overlap rejected HTTP 409 No cleaner available for this slot",
+    "time": "2026-10-27T23:41:55.240Z"
+  }
+]

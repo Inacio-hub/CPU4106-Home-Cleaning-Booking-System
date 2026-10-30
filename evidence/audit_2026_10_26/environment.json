@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-26",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "python": "3.12.14",
+  "sqlite": "3.53.1",
+  "browser": "Chromium 153.0.8010.0",
+  "integration_command": "python test_audit.py",
+  "integration_result": "27 passed; baseline 18 passed and 9 failed",
+  "browser_checks": "15 passed, including one baseline fault reproduction and fourteen revised-app checks",
+  "limits": [
+    "Isolated Linux environment; Windows/viva computer not tested",
+    "Fictional data; no representative UAT",
+    "Two simultaneous conflicting requests only, not load testing",
+    "No full security, accessibility or screen reader assessment"
+  ]
+}

@@ -1,0 +1,208 @@
+test_address_250_accepted (__main__.AuditTests.test_address_250_accepted) ... ok
+test_address_251_rejected (__main__.AuditTests.test_address_251_rejected) ... ok
+test_address_7_rejected (__main__.AuditTests.test_address_7_rejected) ... ok
+test_address_8_accepted (__main__.AuditTests.test_address_8_accepted) ... ok
+test_array_address_rejected (__main__.AuditTests.test_array_address_rejected) ... FAIL
+test_array_payload_rejected (__main__.AuditTests.test_array_payload_rejected) ... ok
+test_assignment_and_status_workflow (__main__.AuditTests.test_assignment_and_status_workflow) ... ok
+test_assignment_conflict_and_wrong_role (__main__.AuditTests.test_assignment_conflict_and_wrong_role) ... ok
+test_boolean_service_id_rejected (__main__.AuditTests.test_boolean_service_id_rejected) ... FAIL
+test_cancel_releases_capacity (__main__.AuditTests.test_cancel_releases_capacity) ... ok
+test_cleaner_cannot_view_cancelled_request (__main__.AuditTests.test_cleaner_cannot_view_cancelled_request) ... FAIL
+test_cleaner_cannot_view_pending_request (__main__.AuditTests.test_cleaner_cannot_view_pending_request) ... FAIL
+test_concurrent_requests_only_one_succeeds (__main__.AuditTests.test_concurrent_requests_only_one_succeeds) ... ok
+test_extra_action_path_rejected (__main__.AuditTests.test_extra_action_path_rejected) ... FAIL
+test_fractional_cleaner_id_rejected (__main__.AuditTests.test_fractional_cleaner_id_rejected) ... FAIL
+test_fractional_service_id_rejected (__main__.AuditTests.test_fractional_service_id_rejected) ... FAIL
+test_malformed_json_rejected (__main__.AuditTests.test_malformed_json_rejected) ... ok
+test_missing_address_rejected (__main__.AuditTests.test_missing_address_rejected) ... ok
+test_negative_content_length_rejected_without_wait (__main__.AuditTests.test_negative_content_length_rejected_without_wait) ... ----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 53688)
+FAIL
+test_numeric_address_rejected (__main__.AuditTests.test_numeric_address_rejected) ... Traceback (most recent call last):
+  File "/workspace/scratch/f952b4e4d3d1/audit_work/project/app.py", line 39, in data
+    val=json.loads(self.rfile.read(length))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/scratch/f952b4e4d3d1/audit_work/project/app.py", line 74, in do_POST
+    self.csrf();path=urlparse(self.path).path;data=self.data()
+                                                   ^^^^^^^^^^^
+  File "/workspace/scratch/f952b4e4d3d1/audit_work/project/app.py", line 42, in data
+    except (ValueError,TypeError):raise Error(400,'Invalid JSON request')
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error: (400, 'Invalid JSON request')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/socketserver.py", line 766, in __init__
+    self.handle()
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/http/server.py", line 440, in handle
+    self.handle_one_request()
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/http/server.py", line 428, in handle_one_request
+    method()
+  File "/workspace/scratch/f952b4e4d3d1/audit_work/project/app.py", line 131, in do_POST
+    except Error as e:self.send_json(e.status,{'error':e.message})
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/f952b4e4d3d1/audit_work/project/app.py", line 34, in send_json
+    self.end_headers();self.wfile.write(b)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/socketserver.py", line 845, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+FAIL
+test_overlapping_capacity_rejected (__main__.AuditTests.test_overlapping_capacity_rejected) ... ok
+test_past_date_rejected (__main__.AuditTests.test_past_date_rejected) ... ok
+test_role_and_ownership_restrictions (__main__.AuditTests.test_role_and_ownership_restrictions) ... ok
+test_sql_injection_is_data (__main__.AuditTests.test_sql_injection_is_data) ... ok
+test_unauthenticated_request_rejected (__main__.AuditTests.test_unauthenticated_request_rejected) ... ok
+test_unknown_service_rejected (__main__.AuditTests.test_unknown_service_rejected) ... ok
+test_valid_booking_persisted_and_server_price (__main__.AuditTests.test_valid_booking_persisted_and_server_price) ... ok
+
+======================================================================
+FAIL: test_array_address_rejected (__main__.AuditTests.test_array_address_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f952b4e4d3d1/audit_work/project/test_audit.py", line 13, in test_array_address_rejected
+    self.assertEqual(self.req(self.customer,'bookings',dict(self.data,service_address=['10 Demo Road']))[0],400)
+AssertionError: 201 != 400
+
+======================================================================
+FAIL: test_boolean_service_id_rejected (__main__.AuditTests.test_boolean_service_id_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f952b4e4d3d1/audit_work/project/test_audit.py", line 19, in test_boolean_service_id_rejected
+    self.assertEqual(self.req(self.customer,'bookings',dict(self.data,service_id=True))[0],400)
+AssertionError: 201 != 400
+
+======================================================================
+FAIL: test_cleaner_cannot_view_cancelled_request (__main__.AuditTests.test_cleaner_cannot_view_cancelled_request)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f952b4e4d3d1/audit_work/project/test_audit.py", line 11, in test_cleaner_cannot_view_cancelled_request
+    self.assertEqual(self.req(self.cleaner,'bookings')[1],[])
+AssertionError: Lists differ: [{'booking_id': 1, 'customer_id': 1, 'clea[256 chars]er'}] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+{'booking_id': 1, 'customer_id': 1, 'cleaner_id': 3, 'service_id': 1, 'start_at': '2026-10-28T10:00:00', 'end_at': '2026-10-28T12:00:00', 'service_address': '10 Fictional Demo Road', 'quoted_price_pence': 4500, 'status': 'cancelled', 'service_name': 'Standard clean', 'customer_name': 'Demo Customer'}
+
++ []
+- [{'booking_id': 1,
+-   'cleaner_id': 3,
+-   'customer_id': 1,
+-   'customer_name': 'Demo Customer',
+-   'end_at': '2026-10-28T12:00:00',
+-   'quoted_price_pence': 4500,
+-   'service_address': '10 Fictional Demo Road',
+-   'service_id': 1,
+-   'service_name': 'Standard clean',
+-   'start_at': '2026-10-28T10:00:00',
+-   'status': 'cancelled'}]
+
+======================================================================
+FAIL: test_cleaner_cannot_view_pending_request (__main__.AuditTests.test_cleaner_cannot_view_pending_request)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f952b4e4d3d1/audit_work/project/test_audit.py", line 8, in test_cleaner_cannot_view_pending_request
+    self.assertEqual(self.req(self.cleaner,'bookings')[1],[])
+AssertionError: Lists differ: [{'booking_id': 1, 'customer_id': 1, 'clea[256 chars]er'}] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+{'booking_id': 1, 'customer_id': 1, 'cleaner_id': 3, 'service_id': 1, 'start_at': '2026-10-28T10:00:00', 'end_at': '2026-10-28T12:00:00', 'service_address': '10 Fictional Demo Road', 'quoted_price_pence': 4500, 'status': 'requested', 'service_name': 'Standard clean', 'customer_name': 'Demo Customer'}
+
++ []
+- [{'booking_id': 1,
+-   'cleaner_id': 3,
+-   'customer_id': 1,
+-   'customer_name': 'Demo Customer',
+-   'end_at': '2026-10-28T12:00:00',
+-   'quoted_price_pence': 4500,
+-   'service_address': '10 Fictional Demo Road',
+-   'service_id': 1,
+-   'service_name': 'Standard clean',
+-   'start_at': '2026-10-28T10:00:00',
+-   'status': 'requested'}]
+
+======================================================================
+FAIL: test_extra_action_path_rejected (__main__.AuditTests.test_extra_action_path_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f952b4e4d3d1/audit_work/project/test_audit.py", line 22, in test_extra_action_path_rejected
+    self.assertEqual(self.req(self.admin,f"bookings/{b['booking_id']}/assign/extra",{'cleaner_id':3})[0],404)
+AssertionError: 200 != 404
+
+======================================================================
+FAIL: test_fractional_cleaner_id_rejected (__main__.AuditTests.test_fractional_cleaner_id_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f952b4e4d3d1/audit_work/project/test_audit.py", line 25, in test_fractional_cleaner_id_rejected
+    self.assertEqual(self.req(self.admin,f"bookings/{b['booking_id']}/assign",{'cleaner_id':3.9})[0],400)
+AssertionError: 200 != 400
+
+======================================================================
+FAIL: test_fractional_service_id_rejected (__main__.AuditTests.test_fractional_service_id_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f952b4e4d3d1/audit_work/project/test_audit.py", line 17, in test_fractional_service_id_rejected
+    self.assertEqual(self.req(self.customer,'bookings',dict(self.data,service_id=1.9))[0],400)
+AssertionError: 201 != 400
+
+======================================================================
+FAIL: test_negative_content_length_rejected_without_wait (__main__.AuditTests.test_negative_content_length_rejected_without_wait)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f952b4e4d3d1/audit_work/project/test_audit.py", line 30, in test_negative_content_length_rejected_without_wait
+    try:r=conn.getresponse()
+          ^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/http/client.py", line 1478, in getresponse
+    response.begin()
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/http/client.py", line 343, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/http/client.py", line 304, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/socket.py", line 720, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/scratch/f952b4e4d3d1/audit_work/project/test_audit.py", line 31, in test_negative_content_length_rejected_without_wait
+    except socket.timeout:self.fail('Server waited for a body with negative Content-Length')
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Server waited for a body with negative Content-Length
+
+======================================================================
+FAIL: test_numeric_address_rejected (__main__.AuditTests.test_numeric_address_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f952b4e4d3d1/audit_work/project/test_audit.py", line 15, in test_numeric_address_rejected
+    self.assertEqual(self.req(self.customer,'bookings',dict(self.data,service_address=12345678))[0],400)
+AssertionError: 201 != 400
+
+----------------------------------------------------------------------
+Ran 27 tests in 4.918s
+
+FAILED (failures=9)

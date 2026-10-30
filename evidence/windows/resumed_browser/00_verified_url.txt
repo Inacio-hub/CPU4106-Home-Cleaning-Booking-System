@@ -1,0 +1,113 @@
+Window: "HomeCare — Booking prototype and 4 more pages - Personal - Microsoft​ Edge", App: msedge.exe.
+	0 window HomeCare — Booking prototype and 4 more pages - Personal - Microsoft​ Edge Secondary Actions: Raise
+		1 pane (disabled)
+		2 region HomeCare — Booking prototype - Microsoft Edge
+			3 region
+				4 region
+					5 region
+						6 button Minimise ID: view_2
+						10752 button Maximise ID: view_3
+						8 button Close ID: view_7
+					9 region
+						10 region
+							11 tool bar App bar ID: view_1000
+								12 button Back ID: view_1001
+								13 button Refresh ID: view_1003
+								14 group
+									15 button View site information ID: view_1015
+									16 edit (settable, string) Address and search bar Description: Search or enter web address Value: 127.0.0.1:59777 ID: view_1017
+									17 region
+									18 region
+										2357 button Add this page to favourites (Ctrl+D) ID: view_1006
+								21 region
+									22 button Favourites ID: view_1007
+								23 button Personal Profile ID: view_1009
+								24 button Settings and more (Alt+F) ID: view_1011
+								25 button Chat ID: view_1078
+						26 region
+							27 region
+								28 region
+									29 region
+										30 region
+											31 region
+											10753 document HomeCare — Booking prototype Value: http://127.0.0.1:59777/ ID: RootWebArea
+												10754 header
+													10755 text HomeCare
+													10756 text Home cleaning service booking • Week 4 validation prototype
+													10757 text Local coursework demonstration
+												10758 main
+													10759 heading Manage cleaning appointments
+													10760 text One business. Clear service prices. Bookings and cleaner availability in one place.
+													10761 heading Sign in
+													10762 text Fictional demonstration accounts only.
+													10763 text Email
+													10764 edit (settable, string) Email Value: customer@example.test ID: email
+													10765 text Password
+													10766 edit (settable, string) Password Value: •••••••••••• ID: password
+													10767 button Sign in
+													10768 text Demo emails: customer@example.test, admin@example.test, cleaner@example.test
+													10769 text 
+													10770 text Password: DemoPass123!
+													10771 section footer
+														10772 text Prototype created with assistance for Inacio’s backend integration tests. Demonstration interface; review and explain the code before coursework submission. Prices and account data are fictional.
+									32 edit
+						33 tab Tab bar
+							34 button Search tabs ID: view_1052
+							1870 region ID: view_25
+								1871 tab
+									1872 tab item (selectable) chatgpt - Search - Memory usage - 76.5 MB ID: view_24
+										1873 button Close tab ID: view_27
+									1874 tab item (selectable) Choose Project Subject - Memory usage - 537 MB ID: view_24
+										1875 button Close tab ID: view_27
+									1876 tab item (selectable) Week 4 Attendance Lab - Memory usage - 30.0 MB ID: view_24
+										1877 button Close tab ID: view_27
+									6613 tab item (selectable) HomeCare — Booking prototype - Memory usage - 30.5 MB ID: view_24
+										6614 button Close tab ID: view_27
+									8819 tab item (selectable) HomeCare — Booking prototype - Memory usage - 117 MB ID: view_24
+										8820 button Close tab ID: view_27
+									1878 region
+										1879 region
+											1880 region
+										1881 region
+								1882 region
+							46 button New Tab ID: view_28
+							47 region
+				48 region
+			8854 status Suggestion available
+
+Document text: ```
+HomeCare
+Home cleaning service booking • Week 4 validation prototype
+Local coursework demonstration
+Manage cleaning appointments
+One business. Clear service prices. Bookings and cleaner availability in one place.
+Sign in
+Fictional demonstration accounts only.
+Email
+customer@example.test
+Password
+••••••••••••
+Sign in
+Demo emails: customer@example.test, admin@example.test, cleaner@example.test
+Password: DemoPass123!
+Prototype created with assistance for Inacio’s backend integration tests. Demonstration interface; review and explain the code before coursework submission. Prices and account data are fictional.
+```
+
+Focused element: 16 edit (settable, string) Address and search bar Description: Search or enter web address Value: 127.0.0.1:59777 ID: view_1017
+
+Document text:
+HomeCare
+Home cleaning service booking • Week 4 validation prototype
+Local coursework demonstration
+Manage cleaning appointments
+One business. Clear service prices. Bookings and cleaner availability in one place.
+Sign in
+Fictional demonstration accounts only.
+Email
+customer@example.test
+Password
+••••••••••••
+Sign in
+Demo emails: customer@example.test, admin@example.test, cleaner@example.test
+Password: DemoPass123!
+Prototype created with assistance for Inacio’s backend integration tests. Demonstration interface; review and explain the code before coursework submission. Prices and account data are fictional.

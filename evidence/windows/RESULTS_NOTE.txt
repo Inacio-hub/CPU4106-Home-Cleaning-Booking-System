@@ -1,0 +1,30 @@
+﻿RESUMED WINDOWS BROWSER VERIFICATION COMPLETED
+The earlier browser limitation documented below is historical and is now resolved for this run. The verified consolidated source was restarted with its existing isolated fictional database at http://127.0.0.1:59777/. The existing Edge tab was selected and fresh browser state confirmed BOTH address bar and document URL match before interaction. URL evidence is in resumed_browser/00_verified_url.txt and subsequent state snapshots.
+
+Actual remaining UI results: requested booking #1 hidden from cleaner (No bookings yet); administrator allocation requested -> assigned; assigned #1 visible to cleaner; Start job -> in_progress; Complete job -> completed; customer created #2 for cancellation-only visibility check and cancelled it; cleaner then saw completed #1 but neither cancelled #2 nor its fictional cancellation address. Eight genuine unmodified screenshots and corresponding state snapshots are in resumed_browser. Results are recorded in resumed_browser/results.json. All actions used supported Edge computer-use controls. No URL-verification restriction was bypassed. No automated tests or installation repeated; the prior clean 27-test run remains unchanged.
+
+Final integrity_check: ok. foreign_key_check: no violations. Isolated fictional database retained with #1 completed and #2 cancelled. Temporary server stopped. Existing attendance, registration and other databases preserved. Updated ZIP supersedes the earlier limited consolidated package; older 18-test evidence remains separate. No source edits, publication, submission, or invented human feedback.
+
+--- Historical initial run note follows ---
+CPU4106 Consolidated Windows Evidence - corrected release
+
+Fresh source: Downloads/Home_Cleaning_Source (1).zip (the newer corrected download). Home_Cleaning_Source.zip without the suffix was the older 18-test release and was NOT used. Newly extracted folder: Home_Cleaning_Audit_Current/Home_Cleaning_Project. Archive SHA-256 is in archive_provenance.txt. The six requested initial and final source hashes are saved. No source changes were needed, no audit cases removed, no diff applicable.
+
+Actual full audit result: test_audit.py ran 27 tests in 14.064 seconds, OK, process exit code 0. Complete stdout and stderr retained separately and combined. This includes all nine audit regression cases. No older suite substituted. Requested/cancelled cleaner visibility, administrator/status workflow and all other cases passed as automated HTTP integration checks in a temporary isolated database.
+
+Environment: Python 3.14.5 configured PyCharm project venv; Windows 11 build 26300; SQLite 3.50.4; Microsoft Edge 156.0.4314.42. Full details in environment_final.json and edge_version.txt. Nothing installed.
+
+Windows browser checks on CURRENT release http://127.0.0.1:59777/:
+PASS URL verified in address bar and document URL.
+PASS empty address: HTTP 400, Enter a service address of 8-250 characters. Screenshot 01.
+PASS successful customer booking #1: requested, Standard clean, 2026-10-28 10:00 local, fictional address, GBP45. Screenshot 02.
+PASS overlap rejection: HTTP 409, No cleaner available for this slot. Screenshot 03.
+BLOCKED subsequent browser checks: browser-control tool stopped because it could not determine the current Windows browser URL with enough confidence to enforce policy. This occurred after the overlap screenshot was saved, while attempting to sign out. No bypass or alternative UI automation attempted.
+UNTESTED IN BROWSER on current release: administrator allocation; cleaner start/completion; requested bookings hidden; cancelled bookings hidden. Corresponding automated audit tests passed, but they are not substitutes for these requested UI demonstrations. No older screenshots or UI results reused.
+
+All three screenshots are genuine unmodified live Windows captures. Accessibility snapshots and browser_results.json included. Browser interaction was stopped immediately when the tool blocked it.
+
+Fresh isolated database audit_fictional_fresh.db used; attendance, registration, old cleaning and XAMPP databases not modified. Read-only integrity_check returned ok; foreign_key_check returned no rows. Final fictional booking retained as requested. Database file omitted from ZIP to exclude password hashes; sanitized final booking snapshot included in environment_final.json. Temporary server stopped afterwards; see server_stop.log.
+
+Limitations: current-release UI workflow is incomplete due to browser-control policy restriction above. Single-cleaner coursework prototype, not production/security/accessibility certification. No human feedback, meetings, contributions or submission invented. Nothing submitted or published. This pack is separate from CPU4106_Cleaning_Windows_Evidence.zip (older 18-test pack).
+

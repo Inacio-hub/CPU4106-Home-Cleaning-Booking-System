@@ -1,0 +1,30 @@
+{
+  "python": "3.14.5 (tags/v3.14.5:5607950, May 10 2026, 10:43:50) [MSC v.1944 64 bit (AMD64)]",
+  "interpreter": "C:\\Users\\ferna\\PycharmProjects\\PythonProject\\.venv\\Scripts\\python.exe",
+  "windows": "Windows-11-10.0.26300-SP0",
+  "sqlite": "3.50.4",
+  "source_folder": "C:\\Users\\ferna\\PycharmProjects\\PythonProject\\Home_Cleaning_Audit_Current\\Home_Cleaning_Project",
+  "source_sha256": {
+    "app.py": "38637e3206dff23ab8bc49efe28da01814060b7bca4797edc77b27d0fda01e60",
+    "index.html": "b642523756da8fbe705978448612fece8a90929a119beb87e3f60fb6a829b35c",
+    "schema.sql": "091c9712a2744f7b2580d538122d47a284b55d8fba66b0e939601d02983824bd",
+    "test_app.py": "c9cefbe6938ad564e07a548e18064448b6d3ff2937801219c14788fbeb011a1e",
+    "test_week4.py": "e5094b54842ad51f828d18213729afac12df180e907bed457fe8eb1216be8b04",
+    "test_audit.py": "d59f7a6f5a23cc465b78170f522febf7173e73c66d8b3f580790bbf2dfcbd613"
+  },
+  "integrity_check": "ok",
+  "foreign_key_check": [],
+  "bookings": [
+    {
+      "booking_id": 1,
+      "customer_id": 1,
+      "cleaner_id": 3,
+      "service_id": 1,
+      "start_at": "2026-10-28T10:00:00",
+      "end_at": "2026-10-28T12:00:00",
+      "service_address": "10 FICTIONAL AUDIT WINDOWS 2340 Road",
+      "quoted_price_pence": 4500,
+      "status": "requested"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "command": "python test_audit.py",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.39",
+  "python": "3.12.14",
+  "exit_code": 0,
+  "process_elapsed_seconds": 4.056,
+  "scope": "Fresh local packaging verification; historical Windows evidence remains separate."
+}
