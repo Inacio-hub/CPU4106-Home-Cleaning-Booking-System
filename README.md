@@ -1,26 +1,22 @@
 # Home Cleaning Service Booking System
 
-## 🌐 [OPEN LIVE WEBSITE — CLICK HERE](https://cpu4106-home-cleaning-demo.onrender.com/)
+## 🌐 [OPEN FULL WEBSITE — GITHUB PAGES](https://inacio-hub.github.io/CPU4106-Home-Cleaning-Booking-System/)
 
-**Lecturer: click the link above to open the running website.** Do **not** click `index.html` in the GitHub file list: GitHub shows source code, not the running application. The website requires the Render deployment, which serves the Python/SQLite backend. If the live URL is unavailable, please use the local run instructions below; availability of the external Render service must be checked separately.
+**Lecturer:** Click **OPEN FULL WEBSITE** above. Opening `index.html` in GitHub's file list shows source code, not the published website.
+
+**GitHub Pages mode:** Public HomeCare homepage, service prices and fictional customer/admin/cleaner workflows run in your browser. Demo bookings use browser localStorage only: they are not shared across devices or browsers and do not use secure authentication. Use fictional addresses and the published demo password only.
+
+**Original backend:** `app.py`, `deploy.py`, `schema.sql` and Python integration tests remain available for local assessment. GitHub Pages does not run Python or SQLite. To run the original backend locally, follow the Windows instructions below.
 
 CPU4106 Level 4 group project: Inacio Fernandes, Jevito Pereira and Socorrina Borges.
 
-A complete local web application for customer bookings, administrator allocation and cleaner job progress. Proposed SDG 8 contribution: clearer small-business scheduling and workload records. Economic impact has not been measured.
+An original complete local web application for customer bookings, administrator allocation and cleaner job progress. Proposed SDG 8 contribution: clearer small-business scheduling and workload records. Economic impact has not been measured.
 
 ## Website access
 
-[**Open HomeCare: live cleaning booking website**](https://cpu4106-home-cleaning-demo.onrender.com/)
+[**OPEN FULL WEBSITE — HomeCare public homepage**](https://inacio-hub.github.io/CPU4106-Home-Cleaning-Booking-System/)
 
-The website is hosted on Render and runs the Python/SQLite backend. The home
-page and database health endpoint were verified in a browser on 31 October
-2026. This check does not claim a new full hosted booking walkthrough.
-
-The link opens a public homepage with service prices. Choose Book a cleaning or Sign in to access booking and staff workflows.
-
-Use only fictional information. Accounts are shared, and temporary free
-hosting storage can reset after sleep, restart or deployment. The first visit
-after inactivity may take about a minute. See [HOSTING.md](HOSTING.md).
+The public GitHub Pages version needs no server login to view its homepage and service prices. Sign in with the fictional demo accounts below to try local browser-only booking and staff workflows. The original database-backed version is still available to run locally.
 
 ## Run on Windows
 
@@ -69,7 +65,7 @@ Optional environment variables: CLEANING_DB and CLEANING_PORT. Default database:
 
 This local coursework prototype uses Python standard-library HTTP handling and SQLite. XAMPP, MySQL and FastAPI are not dependencies. It has one seeded cleaner, in-memory sessions and local business times. Real payments, external messaging, self-service registration, availability editing and production hosting are outside scope. Technical tests do not establish full security, accessibility or representative-user acceptance.
 
-GitHub stores the source. Use the live Render link above to open the website, or run the original application locally as a backup. GitHub Pages does not run this Python/SQLite backend.
+GitHub stores the source and GitHub Pages publishes the browser-only demonstration. The original Python/SQLite application runs locally and is not hosted by GitHub Pages.
 
 ## Allocated responsibilities and assistance
 
@@ -79,7 +75,7 @@ AI substantially supported code, tests, diagrams and documentation. Each member 
 
 ## Upload to GitHub
 
-Extract this ZIP first. Upload the files INSIDE Home_Cleaning_Project to the repository root, including README.md, app.py, index.html, schema.sql, tests, launcher and .gitignore. Do not upload only the ZIP. Check repository access and provide the actual repository URL according to lecturer instructions. The source repository is public. The hosted coursework demo is available through the separate live Render URL above.
+Extract this ZIP first. Upload the files INSIDE Home_Cleaning_Project to the repository root, including README.md, app.py, index.html, schema.sql, tests, launcher and .gitignore. Do not upload only the ZIP. Check repository access and provide the actual repository URL according to lecturer instructions. The source repository is public. The browser-only demo is linked at the top of this README.
 
 ## Coursework documentation and evidence
 
@@ -93,7 +89,7 @@ See docs/PROJECT_GUIDE.md, docs/PLANNING_AND_REVIEW.md, docs/EVIDENCE_INDEX.md a
 
 See [ASSESSMENT_REVIEW.md](ASSESSMENT_REVIEW.md) for brief section references,
 rubric priorities and limits. The latest source includes a compact public layout, current
-service prices and a prospective SDG 8 explanation. The live host may serve an earlier revision until redeployed. Sign-in remains required for
+service prices and a prospective SDG 8 explanation. GitHub Pages may need publication to be enabled in repository Settings → Pages (Deploy from branch: main, /(root)). Sign-in remains required for
 booking and staff workflows. New local checks are recorded in
 [REVIEW_REGRESSION_RESULTS.txt](REVIEW_REGRESSION_RESULTS.txt); these do not add
 to the historical Windows totals.
