@@ -1,9 +1,8 @@
 # Home Cleaning Service Booking System
 
-## [OPEN WEBSITE — HomeCare](https://cpu4106-home-cleaning-demo.onrender.com/)
+## 🌐 [OPEN LIVE WEBSITE — CLICK HERE](https://cpu4106-home-cleaning-demo.onrender.com/)
 
-**For the running homepage, services and prices, click OPEN WEBSITE above.**
-Clicking `index.html` inside GitHub displays its HTML source; it does not launch the website or Python backend.
+**Lecturer: click the link above to open the running website.** Do **not** click `index.html` in the GitHub file list: GitHub shows source code, not the running application. The website requires the Render deployment, which serves the Python/SQLite backend. If the live URL is unavailable, please use the local run instructions below; availability of the external Render service must be checked separately.
 
 CPU4106 Level 4 group project: Inacio Fernandes, Jevito Pereira and Socorrina Borges.
 
