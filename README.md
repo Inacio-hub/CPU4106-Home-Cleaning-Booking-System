@@ -1,10 +1,15 @@
 # Home Cleaning Service Booking System
 
+## [OPEN WEBSITE — HomeCare](https://cpu4106-home-cleaning-demo.onrender.com/)
+
+**For the running homepage, services and prices, click OPEN WEBSITE above.**
+Clicking `index.html` inside GitHub displays its HTML source; it does not launch the website or Python backend.
+
 CPU4106 Level 4 group project: Inacio Fernandes, Jevito Pereira and Socorrina Borges.
 
 A complete local web application for customer bookings, administrator allocation and cleaner job progress. Proposed SDG 8 contribution: clearer small-business scheduling and workload records. Economic impact has not been measured.
 
-## Open the live website
+## Website access
 
 [**Open HomeCare: live cleaning booking website**](https://cpu4106-home-cleaning-demo.onrender.com/)
 
@@ -88,8 +93,8 @@ See docs/PROJECT_GUIDE.md, docs/PLANNING_AND_REVIEW.md, docs/EVIDENCE_INDEX.md a
 ## Assessment and homepage review
 
 See [ASSESSMENT_REVIEW.md](ASSESSMENT_REVIEW.md) for brief section references,
-rubric priorities and limits. The homepage has a compact public layout, current
-service prices and a prospective SDG 8 explanation. Sign-in remains required for
+rubric priorities and limits. The latest source includes a compact public layout, current
+service prices and a prospective SDG 8 explanation. The live host may serve an earlier revision until redeployed. Sign-in remains required for
 booking and staff workflows. New local checks are recorded in
 [REVIEW_REGRESSION_RESULTS.txt](REVIEW_REGRESSION_RESULTS.txt); these do not add
 to the historical Windows totals.
