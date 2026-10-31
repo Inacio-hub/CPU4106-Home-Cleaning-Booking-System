@@ -44,7 +44,7 @@ $('schemaButton').onclick=async()=>{try{$('schemalist').innerHTML=(await api('ad
 $('logout').onclick=async()=>{await api('logout',{});user=null;updateAccountLink();go('home')};
 
 function updateAccountLink(){const a=$('account-link');a.textContent=user?'My account':'Sign in';a.href=user?'#dashboard':'#signin'}
-function go(view){if(location.hash==='#'+view)renderRoute();else location.hash=view}
+function go(view){window.history.replaceState({homecareNavigation:true},'',location.pathname+location.search+location.hash);if(location.hash==='#'+view)renderRoute();else location.hash=view}
 async function renderRoute(){
  const route=location.hash.slice(1)||'home';const account=route==='dashboard';const signin=route==='signin';
  $('home-view').classList.toggle('hidden',account||signin);$('login').classList.toggle('hidden',!signin);$('workspace').classList.add('hidden');$('message').style.display='none';
@@ -59,6 +59,8 @@ async function publicServices(){try{
  }catch(e){$('public-services').textContent='Services could not be loaded. Please refresh the page to try again.'}}
 document.addEventListener('click',e=>{const choose=e.target.closest('[data-choose-service]');const book=e.target.closest('[data-book]');if(choose||book){e.preventDefault();if(choose)pendingService=choose.dataset.chooseService;go(user?'dashboard':'signin')}});
 window.addEventListener('hashchange',renderRoute);
+// Direct visits always start at the public homepage; explicit in-page navigation remains available.
+if(location.hash && !window.history.state?.homecareNavigation){window.history.replaceState(null,'',location.pathname+location.search)}
 publicServices();api('me').then(u=>{user=u}).catch(()=>{user=null}).finally(()=>{updateAccountLink();renderRoute()});
 
 </script></body></html>
