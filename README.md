@@ -4,6 +4,18 @@ CPU4106 Level 4 group project: Inacio Fernandes, Jevito Pereira and Socorrina Bo
 
 A complete local web application for customer bookings, administrator allocation and cleaner job progress. Proposed SDG 8 contribution: clearer small-business scheduling and workload records. Economic impact has not been measured.
 
+## Live website hosting preparation
+
+The full Python/SQLite coursework website is prepared for Render deployment.
+A live URL has not yet been verified. See [HOSTING.md](HOSTING.md) for the
+hosting settings and the clear limits of temporary free demo storage.
+
+[Deploy the coursework demo on Render](https://render.com/deploy?repo=https://github.com/Inacio-hub/CPU4106-Home-Cleaning-Booking-System)
+
+This button creates a deployment in the repository owner's Render account;
+it is not the live website link. After deployment succeeds, the actual live
+HTTPS website link will be added here and to the presentation.
+
 ## Run on Windows
 
 1. Install Python 3.10 or later if needed. No external packages are required.
@@ -43,7 +55,7 @@ Use fictional addresses and an available future whole-hour slot. Bookings must f
 
 Run `py test_audit.py` on Windows, or `python3 test_audit.py` elsewhere. It runs the expanded 27-case suite using an isolated temporary database and port 8766. Do not add counts from inherited or repeated suites together.
 
-Historical expanded audit: 18 passing and 9 failing tests before corrections, then all 27 passing. The corrected release subsequently passed all 27 Windows tests in 14.064 seconds with exit code 0. Eleven genuine Windows screenshot states document the booking, allocation, progress and cancellation workflows. Screenshot states are separate from automated test cases. These are recorded prior results, not a new execution during packaging. Detailed logs and screenshots remain in the separately supplied consolidated Windows evidence archive.
+Historical expanded audit: 18 passing and 9 failing tests before corrections, then all 27 passing. The corrected release subsequently passed all 27 Windows tests in 14.064 seconds with exit code 0. Eleven genuine Windows screenshot states document the booking, allocation, progress and cancellation workflows. Screenshot states are separate from automated test cases. These are recorded prior results, not a new execution during packaging. Detailed logs and screenshots are preserved under evidence/windows/ and in the separately supplied consolidated Windows evidence archive.
 
 ## Configuration and limitations
 
@@ -61,8 +73,9 @@ AI substantially supported code, tests, diagrams and documentation. Each member 
 
 ## Upload to GitHub
 
-Extract this ZIP first. Upload the files INSIDE Home_Cleaning_Project to the repository root, including README.md, app.py, index.html, schema.sql, tests, launcher and .gitignore. Do not upload only the ZIP. Check repository access and provide the actual repository URL according to lecturer instructions. Nothing has been published by preparation of this package.
+Extract this ZIP first. Upload the files INSIDE Home_Cleaning_Project to the repository root, including README.md, app.py, index.html, schema.sql, tests, launcher and .gitignore. Do not upload only the ZIP. Check repository access and provide the actual repository URL according to lecturer instructions. The source repository is public. Hosting preparation does not establish a successful live deployment.
 
 ## Coursework documentation and evidence
 
 See docs/PROJECT_GUIDE.md, docs/PLANNING_AND_REVIEW.md, docs/EVIDENCE_INDEX.md and docs/SUBMISSION_CHECKLIST.md. Upload docs/ and evidence/ alongside the root source files. Historical evidence and proposed activity records are clearly separated.
+

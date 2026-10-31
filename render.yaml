@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: cpu4106-home-cleaning-demo
+    runtime: python
+    plan: free
+    repo: https://github.com/Inacio-hub/CPU4106-Home-Cleaning-Booking-System
+    branch: main
+    buildCommand: python -m py_compile app.py deploy.py
+    startCommand: python deploy.py
+    healthCheckPath: /healthz
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.13.5
+      - key: CLEANING_DB
+        value: /tmp/cpu4106-demo.sqlite3
+      - key: PYTHONUNBUFFERED
+        value: '1'
