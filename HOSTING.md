@@ -17,9 +17,15 @@ Secure session cookies behind HTTPS, a health endpoint, and a visible demo notic
 - Render supplies PORT and RENDER_EXTERNAL_URL automatically.
 - No real customer database, credentials or private information is uploaded.
 
-render.yaml defines these settings. Creating the service still requires the
-owner's connected Render account. A deployment file is not a deployed website.
-Record the actual successful deployment URL before updating presentation links.
+## Verified live URL
+
+https://cpu4106-home-cleaning-demo.onrender.com/
+
+The owner deployed the Free service from the Blueprint. The supplied Render
+screen shows Live at source commit 8bae1d7cef1908bd95c1f491c0b81ebdf88e6ca3.
+On 31 October 2026, the browser displayed the HomeCare sign-in page and visible
+demo warning. /healthz returned {"status": "ok", "mode": "coursework-demo"}.
+No complete new hosted role workflow is claimed by this availability check.
 
 ## Important demonstration limits
 
@@ -30,16 +36,16 @@ this instance runs, but free Render local storage resets on sleep, restart or
 redeploy. The service can take about a minute to wake after 15 minutes idle.
 Open it before the viva. Durable hosting would require a separate agreed change.
 
-## Links after verified deployment
+## Website and source links
 
-Add an **Open live coursework website** link near the top of README.md and put
-the same real HTTPS URL on slide 18. Retain a separate source-code repository
-link. The repository's github.com address will continue to open source code;
-the live website has its own address.
+README.md provides the live website link. Slide 18 provides separate clickable
+links for the live website and GitHub source. The github.com repository address
+continues to open code; the onrender.com address opens the running website.
 
 ## Evidence
 
 Historical 27-test Windows results and 11 screenshot states describe the tested
 local release at commit 155aff203e75da5f15865dcf640f878cb544bb86. Hosted-adapter
 tests are separate new verification, not additional historical Windows cases.
-Do not describe hosted browser behaviour as verified until deployment is tested.
+The live availability check covers the homepage and health endpoint only; historical local test and screenshot totals remain separate.
+

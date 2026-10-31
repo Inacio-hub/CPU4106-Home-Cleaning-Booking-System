@@ -4,17 +4,17 @@ CPU4106 Level 4 group project: Inacio Fernandes, Jevito Pereira and Socorrina Bo
 
 A complete local web application for customer bookings, administrator allocation and cleaner job progress. Proposed SDG 8 contribution: clearer small-business scheduling and workload records. Economic impact has not been measured.
 
-## Live website hosting preparation
+## Open the live website
 
-The full Python/SQLite coursework website is prepared for Render deployment.
-A live URL has not yet been verified. See [HOSTING.md](HOSTING.md) for the
-hosting settings and the clear limits of temporary free demo storage.
+[**Open HomeCare: live cleaning booking website**](https://cpu4106-home-cleaning-demo.onrender.com/)
 
-[Deploy the coursework demo on Render](https://render.com/deploy?repo=https://github.com/Inacio-hub/CPU4106-Home-Cleaning-Booking-System)
+The website is hosted on Render and runs the Python/SQLite backend. The home
+page and database health endpoint were verified in a browser on 31 October
+2026. This check does not claim a new full hosted booking walkthrough.
 
-This button creates a deployment in the repository owner's Render account;
-it is not the live website link. After deployment succeeds, the actual live
-HTTPS website link will be added here and to the presentation.
+Use only fictional information. Accounts are shared, and temporary free
+hosting storage can reset after sleep, restart or deployment. The first visit
+after inactivity may take about a minute. See [HOSTING.md](HOSTING.md).
 
 ## Run on Windows
 
@@ -63,7 +63,7 @@ Optional environment variables: CLEANING_DB and CLEANING_PORT. Default database:
 
 This local coursework prototype uses Python standard-library HTTP handling and SQLite. XAMPP, MySQL and FastAPI are not dependencies. It has one seeded cleaner, in-memory sessions and local business times. Real payments, external messaging, self-service registration, availability editing and production hosting are outside scope. Technical tests do not establish full security, accessibility or representative-user acceptance.
 
-GitHub stores the source. GitHub Pages cannot execute this Python/SQLite backend; run it locally for the complete demonstration.
+GitHub stores the source. Use the live Render link above to open the website, or run the original application locally as a backup. GitHub Pages does not run this Python/SQLite backend.
 
 ## Allocated responsibilities and assistance
 
@@ -73,9 +73,10 @@ AI substantially supported code, tests, diagrams and documentation. Each member 
 
 ## Upload to GitHub
 
-Extract this ZIP first. Upload the files INSIDE Home_Cleaning_Project to the repository root, including README.md, app.py, index.html, schema.sql, tests, launcher and .gitignore. Do not upload only the ZIP. Check repository access and provide the actual repository URL according to lecturer instructions. The source repository is public. Hosting preparation does not establish a successful live deployment.
+Extract this ZIP first. Upload the files INSIDE Home_Cleaning_Project to the repository root, including README.md, app.py, index.html, schema.sql, tests, launcher and .gitignore. Do not upload only the ZIP. Check repository access and provide the actual repository URL according to lecturer instructions. The source repository is public. The hosted coursework demo is available through the separate live Render URL above.
 
 ## Coursework documentation and evidence
 
 See docs/PROJECT_GUIDE.md, docs/PLANNING_AND_REVIEW.md, docs/EVIDENCE_INDEX.md and docs/SUBMISSION_CHECKLIST.md. Upload docs/ and evidence/ alongside the root source files. Historical evidence and proposed activity records are clearly separated.
+
 
