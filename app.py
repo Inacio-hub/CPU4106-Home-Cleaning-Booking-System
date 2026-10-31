@@ -64,7 +64,7 @@ class Handler(BaseHTTPRequestHandler):
   try:
    path=urlparse(self.path).path
    if path=='/':
-    b=(ROOT/'index.html').read_bytes();self.send_response(200);self.send_header('Content-Type','text/html; charset=utf-8');self.send_header('Content-Security-Policy',"default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; frame-ancestors 'none'");self.end_headers();self.wfile.write(b);return
+    frontend=ROOT/'backend-index.html';b=(frontend if frontend.exists() else ROOT/'index.html').read_bytes();self.send_response(200);self.send_header('Content-Type','text/html; charset=utf-8');self.send_header('Content-Security-Policy',"default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; frame-ancestors 'none'");self.end_headers();self.wfile.write(b);return
    if path=='/api/services':
     with connection() as c:return self.send_json(200,[dict(r) for r in c.execute('SELECT * FROM Services')])
    if path=='/api/me':return self.send_json(200,self.user())
