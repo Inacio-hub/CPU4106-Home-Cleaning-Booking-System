@@ -18,6 +18,14 @@ An original complete local web application for customer bookings, administrator 
 
 The public GitHub Pages version needs no server login to view its homepage and service prices. Sign in with the fictional demo accounts below to try local browser-only booking and staff workflows. The original database-backed version is still available to run locally.
 
+## Updated Python/SQLite homepage (31 October 2026)
+
+The Python application now opens a public homepage with services, prices and booking steps before sign-in. `app.py` serves `backend-index.html` when present and falls back to `index.html` for older local packages. Download the complete repository to run this version; keep both frontend files. Protected actions still use the Python API and SQLite database. Existing databases are not included or overwritten.
+
+The public homepage was observed through the Opera connector on Inacio's laptop. The earlier manual booking sequence showed requested, assigned, in-progress and completed states. That sequence preceded the homepage change. A new isolated Linux run of `python3 -m unittest test_audit.AuditTests` passed 27 tests in 3.844 seconds. JavaScript syntax and selected-service handoff logic also passed checks using a Node DOM stub, which is not a full browser interaction test. These results are separate from the historical Windows run and its 11 screenshot states.
+
+GitHub Pages remains the separate browser-only preview. It cannot run this Python/SQLite application. Updating source does not verify a Render deployment.
+
 ## Run on Windows
 
 1. Install Python 3.10 or later if needed. No external packages are required.
@@ -46,7 +54,8 @@ Use fictional addresses and an available future whole-hour slot. Bookings must f
 
 ## Source files
 
-- index.html: full frontend, including CSS and JavaScript.
+- backend-index.html: public homepage and customer/staff frontend for the Python/SQLite system shown in the final viva.
+- index.html: separate browser-only GitHub Pages demonstration, using localStorage.
 - app.py: Python HTTP server, sessions, role checks, validation and database operations.
 - schema.sql: relational schema and constraints.
 - test_app.py, test_week4.py, test_audit.py: integration tests and regression coverage.
