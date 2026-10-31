@@ -9,11 +9,11 @@ from http.server import ThreadingHTTPServer
 import app
 
 PUBLIC_ORIGIN = os.environ.get('CLEANING_PUBLIC_ORIGIN', os.environ.get('RENDER_EXTERNAL_URL', '')).rstrip('/')
-NOTICE = ('<aside role="note" style="padding:16px;background:#fff4ce;border:1px solid #876800;line-height:1.5">'
+NOTICE = ('<details class="demo-notice"><summary>Coursework demo — fictional data only</summary><p>'
           '<strong>Shared coursework demonstration.</strong> Use fictional names and addresses only. '
           'Demo accounts are public; other visitors can see or change demo records. '
           'Bookings are stored in SQLite while the demo is running, but may reset after sleep, restart or deployment. '
-          'This is not a real cleaning business.</aside>')
+          'This is not a real cleaning business.</p></details>')
 
 class HostedHandler(app.Handler):
     def setup(self):
@@ -59,7 +59,7 @@ class HostedHandler(app.Handler):
             return
         if path == '/':
             html = (app.ROOT / 'index.html').read_text(encoding='utf-8')
-            html = html.replace('<main>', '<main>' + NOTICE, 1)
+            html = html.replace('<main id="main">', '<main id="main">' + NOTICE, 1)
             html = html.replace('Local coursework demonstration', 'Hosted coursework demonstration')
             body = html.encode('utf-8')
             self.send_response(200)

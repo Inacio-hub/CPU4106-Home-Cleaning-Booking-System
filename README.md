@@ -12,6 +12,8 @@ The website is hosted on Render and runs the Python/SQLite backend. The home
 page and database health endpoint were verified in a browser on 31 October
 2026. This check does not claim a new full hosted booking walkthrough.
 
+The link opens a public homepage with service prices. Choose Book a cleaning or Sign in to access booking and staff workflows.
+
 Use only fictional information. Accounts are shared, and temporary free
 hosting storage can reset after sleep, restart or deployment. The first visit
 after inactivity may take about a minute. See [HOSTING.md](HOSTING.md).
@@ -78,5 +80,6 @@ Extract this ZIP first. Upload the files INSIDE Home_Cleaning_Project to the rep
 ## Coursework documentation and evidence
 
 See docs/PROJECT_GUIDE.md, docs/PLANNING_AND_REVIEW.md, docs/EVIDENCE_INDEX.md and docs/SUBMISSION_CHECKLIST.md. Upload docs/ and evidence/ alongside the root source files. Historical evidence and proposed activity records are clearly separated.
+
 
 
