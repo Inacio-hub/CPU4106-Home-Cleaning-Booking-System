@@ -83,3 +83,13 @@ See docs/PROJECT_GUIDE.md, docs/PLANNING_AND_REVIEW.md, docs/EVIDENCE_INDEX.md a
 
 
 
+
+
+## Assessment and homepage review
+
+See [ASSESSMENT_REVIEW.md](ASSESSMENT_REVIEW.md) for brief section references,
+rubric priorities and limits. The homepage has a compact public layout, current
+service prices and a prospective SDG 8 explanation. Sign-in remains required for
+booking and staff workflows. New local checks are recorded in
+[REVIEW_REGRESSION_RESULTS.txt](REVIEW_REGRESSION_RESULTS.txt); these do not add
+to the historical Windows totals.
