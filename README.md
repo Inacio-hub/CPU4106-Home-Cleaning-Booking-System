@@ -28,6 +28,14 @@ The public homepage was observed through the Opera connector on Inacio's laptop.
 
 GitHub Pages remains the separate browser-only preview. It cannot run this Python/SQLite application. Updating source does not verify a Render deployment.
 
+## Access verification — 2 November 2026
+
+The existing public Render service passed **22 live HTTP/API checks**, including anonymous homepage access, protected identity, public service prices, all three demo role sign-ins, Secure session cookie, booking storage and readback, past-date validation, overlap rejection, role restrictions, administrator allocation and cleaner start/completion. These are new checks, separate from the historical 27 Windows tests. One fictional test booking was completed. This was API testing, not a complete graphical-browser walkthrough or a restart-persistence test.
+
+The updated repository passed **27 isolated Linux audit tests in 5.542 seconds** and one additional hosted-frontend regression in 0.761 seconds. The regression verifies that the hosted launcher serves the Python frontend without localStorage, includes the demo notice and exposes services/health through the database-backed server.
+
+**Deployment status:** The live service still displayed its earlier frontend during verification. The repository's hosted frontend fix has been committed but its deployment has not been confirmed. In Render, select `cpu4106-home-cleaning-demo` → **Manual Deploy → Deploy latest commit** to apply the current `main` version. Do not treat the successful API checks on the earlier live release as verification of this new deployment.
+
 ## Run on Windows
 
 1. Install Python 3.10 or later if needed. No external packages are required.
