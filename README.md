@@ -1,12 +1,14 @@
 # Home Cleaning Service Booking System
 
-## 🌐 [OPEN FULL WEBSITE — GITHUB PAGES](https://inacio-hub.github.io/CPU4106-Home-Cleaning-Booking-System/)
+## [OPEN WORKING WEBSITE — Python/SQLite](https://cpu4106-home-cleaning-demo.onrender.com/)
 
-**Lecturer:** Click **OPEN FULL WEBSITE** above. Opening `index.html` in GitHub's file list shows source code, not the published website.
+## [VIEW SOURCE CODE — GitHub](https://github.com/Inacio-hub/CPU4106-Home-Cleaning-Booking-System)
 
-**GitHub Pages mode:** Public HomeCare homepage, service prices and fictional customer/admin/cleaner workflows run in your browser. Demo bookings use browser localStorage only: they are not shared across devices or browsers and do not use secure authentication. Use fictional addresses and the published demo password only.
+**Lecturer and group members:** The working website link opens the public HomeCare homepage on your own computer. The hosted application provides the Python API and shared SQLite bookings. Sign in with the fictional demo accounts below for protected customer, administrator and cleaner actions. Opening an HTML file in GitHub's file list displays source code.
 
-**Original backend:** `app.py`, `deploy.py`, `schema.sql` and Python integration tests remain available for local assessment. GitHub Pages does not run Python or SQLite. To run the original backend locally, follow the Windows instructions below.
+**Free hosting:** After 15 minutes without traffic the service can sleep. The next visit may take about one minute to start. SQLite records and sessions are temporary and may reset after sleep, restart or deployment. Existing local databases are not uploaded or changed. Use fictional records only. This is a shared coursework demo, not a real cleaning service.
+
+**Separate browser-only preview:** [GitHub Pages](https://inacio-hub.github.io/CPU4106-Home-Cleaning-Booking-System/) uses localStorage and does not run Python, SQLite or secure server authentication. It is not equivalent to the working website linked above.
 
 CPU4106 Level 4 group project: Inacio Fernandes, Jevito Pereira and Socorrina Borges.
 
@@ -14,9 +16,9 @@ An original complete local web application for customer bookings, administrator 
 
 ## Website access
 
-[**OPEN FULL WEBSITE — HomeCare public homepage**](https://inacio-hub.github.io/CPU4106-Home-Cleaning-Booking-System/)
+[**Open working website**](https://cpu4106-home-cleaning-demo.onrender.com/) · [**View source code**](https://github.com/Inacio-hub/CPU4106-Home-Cleaning-Booking-System)
 
-The public GitHub Pages version needs no server login to view its homepage and service prices. Sign in with the fictional demo accounts below to try local browser-only booking and staff workflows. The original database-backed version is still available to run locally.
+The homepage and service prices are public. Sign-in protects booking and staff actions. The original Python/SQLite system can also run locally using the Windows instructions below. `deploy.py` now selects `backend-index.html` for hosted access, matching `app.py`; `index.html` remains the separate Pages preview.
 
 ## Updated Python/SQLite homepage (31 October 2026)
 
@@ -74,7 +76,7 @@ Optional environment variables: CLEANING_DB and CLEANING_PORT. Default database:
 
 This local coursework prototype uses Python standard-library HTTP handling and SQLite. XAMPP, MySQL and FastAPI are not dependencies. It has one seeded cleaner, in-memory sessions and local business times. Real payments, external messaging, self-service registration, availability editing and production hosting are outside scope. Technical tests do not establish full security, accessibility or representative-user acceptance.
 
-GitHub stores the source and GitHub Pages publishes the browser-only demonstration. The original Python/SQLite application runs locally and is not hosted by GitHub Pages.
+GitHub stores the source and GitHub Pages publishes the browser-only demonstration. The Python/SQLite application runs locally or through the Render service linked above. GitHub Pages hosts only the separate browser preview.
 
 ## Allocated responsibilities and assistance
 
@@ -84,7 +86,7 @@ AI substantially supported code, tests, diagrams and documentation. Each member 
 
 ## Upload to GitHub
 
-Extract this ZIP first. Upload the files INSIDE Home_Cleaning_Project to the repository root, including README.md, app.py, index.html, schema.sql, tests, launcher and .gitignore. Do not upload only the ZIP. Check repository access and provide the actual repository URL according to lecturer instructions. The source repository is public. The browser-only demo is linked at the top of this README.
+Extract this ZIP first. Upload the files INSIDE Home_Cleaning_Project to the repository root, including README.md, app.py, index.html, schema.sql, tests, launcher and .gitignore. Do not upload only the ZIP. Check repository access and provide the actual repository URL according to lecturer instructions. The source repository is public. The working Python/SQLite website and the separate browser-only preview are labelled above.
 
 ## Coursework documentation and evidence
 
@@ -102,3 +104,4 @@ service prices and a prospective SDG 8 explanation. GitHub Pages may need public
 booking and staff workflows. New local checks are recorded in
 [REVIEW_REGRESSION_RESULTS.txt](REVIEW_REGRESSION_RESULTS.txt); these do not add
 to the historical Windows totals.
+
