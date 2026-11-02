@@ -60,7 +60,10 @@ class HostedHandler(app.Handler):
         if path == '/':
             frontend = app.ROOT / 'backend-index.html'
             html = (frontend if frontend.exists() else app.ROOT / 'index.html').read_text(encoding='utf-8')
-            html = html.replace('<main id="main">', '<main id="main">' + NOTICE, 1)
+            if '<main id="main">' in html:
+                html = html.replace('<main id="main">', '<main id="main">' + NOTICE, 1)
+            else:
+                html = html.replace('<main>', '<main>' + NOTICE, 1)
             html = html.replace('Local coursework demonstration', 'Hosted coursework demonstration')
             body = html.encode('utf-8')
             self.send_response(200)
