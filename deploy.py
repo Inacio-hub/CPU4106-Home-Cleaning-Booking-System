@@ -58,7 +58,8 @@ class HostedHandler(app.Handler):
             self.wfile.write(body)
             return
         if path == '/':
-            html = (app.ROOT / 'index.html').read_text(encoding='utf-8')
+            frontend = app.ROOT / 'backend-index.html'
+            html = (frontend if frontend.exists() else app.ROOT / 'index.html').read_text(encoding='utf-8')
             html = html.replace('<main id="main">', '<main id="main">' + NOTICE, 1)
             html = html.replace('Local coursework demonstration', 'Hosted coursework demonstration')
             body = html.encode('utf-8')
@@ -77,3 +78,4 @@ if __name__ == '__main__':
     host = os.environ.get('CLEANING_HOST', '0.0.0.0')
     print(f'Coursework demo listening on {host}:{port}', flush=True)
     ThreadingHTTPServer((host, port), HostedHandler).serve_forever()
+
