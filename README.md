@@ -86,11 +86,9 @@ This local coursework prototype uses Python standard-library HTTP handling and S
 
 GitHub stores the source and GitHub Pages publishes the browser-only demonstration. The Python/SQLite application runs locally or through the Render service linked above. GitHub Pages hosts only the separate browser preview.
 
-## Allocated responsibilities and assistance
+## Allocated responsibilities
 
 Inacio: backend validation, storage, availability and booking-conflict checks. Jevito: customer interface, form, confirmation and validation messages. Socorrina: administrator allocation, cleaner dashboard and job-status workflow. Allocation does not prove independent authorship or testing.
-
-AI substantially supported code, tests, diagrams and documentation. Each member must review and understand the work and confirm their actual contributions. No meetings, feedback or individual commit history are invented.
 
 ## Upload to GitHub
 
